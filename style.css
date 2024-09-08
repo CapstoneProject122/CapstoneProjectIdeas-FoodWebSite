@@ -49,6 +49,34 @@ h2 {
   column-gap: 80px;
 }
 
+.bg-dark{
+  width: 900px;
+  margin: 0 auto;
+}
+
+table{
+  width:100%;
+  border-style:dashed;
+  border:1px solid #000;
+}
+
+th{
+  font-weight:bold;
+  border-color:bisque;
+  border:1px solid #000;
+}
+
+td{
+  border:1px solid #000;
+}
+
+.tabletable-borderedtext-center{/*//////OJO/////////*/
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 118px;
+  align-self:center;
+}
+
 .btn:link,
 .btn:visited {
   background-color: #087f5b;
