@@ -380,6 +380,37 @@ $result = mysqli_query($con,$query);
       </section>
 
 
+
+
+      <section class="wrapper-main">
+        <form action="example.html" method="post">
+          <label for="firstname">Name</label>
+          <br>
+          <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+          <br><br>
+          <label>Pick your area</label>
+          <br>
+          <input type="radio" id="eyecolorblue" name="eyecolor" value="Manhattan">
+          <label for="eyecolorblue">Manhattan</label>
+          <input type="radio" id="eyecolorbrown" name="eyecolor" value="Queens">
+          <label for="eyecolorbrown">Queens</label>
+          <input type="radio" id="eyecolorgreen" name="eyecolor" value="Brooklyn">
+          <label for="eyecolorgreen">Brooklyn</label>
+          <br><br>
+          <label>Select the area</label>
+          <br>
+          <select name="cartype" id="cartype">
+            <option value="none">Manhattan</option>
+            <option value="Ford">Queens</option>
+            <option value="Mustang">Brooklyn</option>
+            <option value="Toyota">Bronx</option>
+          </select>
+          <br><br>
+          <button type="submit" value="submit">Send data</button>
+          <br><br>
+        </form>
+      </section>
+
       <section class="bg-dark">
         <div class="container">
           <div class="row mt-5">
