@@ -257,6 +257,47 @@ h4 {
   padding:12px;
 }
 
+
+
+
+
+.wrapper-main{
+  width:500px;
+  margin: 0 auto;  
+}
+
+textarea:focus,input[type="text"]:focus{
+  /*border: 2px solid #111;*/
+  outline: 1px solid blue;
+  
+}
+
+.textarea{
+  width:100%;
+  height:100px;
+  resize:vertical;
+}
+
+input[type="radio"]{
+  appearance:radio;
+}
+
+select{
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+input[type="text"], textarea, select, button{
+  padding:10px;
+  border-radius: 10 px;
+  font-size: 30px;
+}
+
+button:hover{
+  background-color:rgb(203, 195, 186);
+  cursor:pointer;
+}
+
 footer {
   margin-bottom: 48px;
   font-size: 14px;
