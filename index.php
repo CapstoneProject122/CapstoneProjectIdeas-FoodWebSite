@@ -1,6 +1,6 @@
 <?php
 require_once('config/db.php');
-$query = "select dba,street,grade_date,grade from nyc_restaurants where dba='tofu tofu'";
+$query = "select dba,street,grade_date,grade from nyc_restaurants where dba='$_GET[firstname]'";
 $result = mysqli_query($con,$query);
 
 ?>
@@ -383,7 +383,7 @@ $result = mysqli_query($con,$query);
 
 
       <section class="wrapper-main">
-        <form action="example.html" method="post">
+        <form action="index.php" method="get">
           <label for="firstname">Name</label>
           <br>
           <input type="text" id="firstname" name="firstname" placeholder="Firstname">
