@@ -376,7 +376,7 @@ $result = mysqli_query($con,$query);
 
       <section class="googlemaprestaurant">
         <h4>Locations near you.</h4>
-         <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=restaurants+near&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="the-googlemap-enabler" href="https://kbj9qpmy.com/hrn" id="grab-map-data">InMotion Hosting</a><style>#display-google-map img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
+         <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe src="https://www.google.com/maps/d/embed?mid=1jqb3EQH5UwXbTG2F87dcf6-GUhxrtHE&usp=sharing"width="640" height="480"></iframe></div><a class="the-googlemap-enabler" href="https://kbj9qpmy.com/hrn" id="grab-map-data">InMotion Hosting</a><style>#display-google-map img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
       </section>
 
 
@@ -422,10 +422,10 @@ $result = mysqli_query($con,$query);
                 <div class="card-body">
                   <table class="tabletable-borderedtext-center">
                     <tr class="bg-dark text-white">
-                      <th style="width: 300px;">Nombre</th>
-                      <th>Direccion</th>
+                      <th style="width: 300px;">Name of restaurant</th>
+                      <th>Address-Location</th>
                       <th>Grade-Date</th>
-                      <th style="margin-left: 120px;">Certification</th>
+                      <th style="margin-left: 120px;">Grade</th>
                     </tr>                    
                     <tr>
                       <?php
