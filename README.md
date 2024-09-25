@@ -14,3 +14,5 @@ Date when was graded after inspection: 05/16/2023
 Grade: Which letter certification was obtained, in this case A
 
 Working in a format so user can enter information to interact with the database.
+
+The video of the Advertise section Top5.mp4 is too big to be upload. Downloas from Slack and add it in the hosting server or PC manually.
