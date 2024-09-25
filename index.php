@@ -1,6 +1,6 @@
 <?php
 require_once('config/db.php');
-$query = "select dba,street,grade_date,grade from nyc_restaurants where dba='$_GET[firstname]'";
+$query = "select dba,cuisine_description,street,zipcode,phone,grade_date,grade from nyc_restaurants where cuisine_description='$_GET[cartype]' and score='0'";
 $result = mysqli_query($con,$query);
 
 ?>
@@ -23,6 +23,18 @@ $result = mysqli_query($con,$query);
     <link rel="stylesheet" href="style.css" />
     <title>Take me to a good place</title>
   </head>
+
+  
+
+
+  <div style="display:flex; justify-content:center; align-items:center;
+  width:150px;height:150px;position:absolute; left:50%; top:0; margin-left:-75px; ">
+    <img src="LOGO2.jfif" />
+  </div>
+  <br><br><br><br><br><br>
+
+
+
   <body>
     <div class="container">
       <header>
@@ -31,7 +43,7 @@ $result = mysqli_query($con,$query);
           <p class="header-text">
             In New York Certification helps prevent foodborne illnesses that can affect customers and protect the business from negative consequences.
           </p>
-          <a class="btn btn--big" href="#">Button1</a>
+          <a class="btn btn--big" href="login/login.html">Login</a>
         </div>
         <img src="hero5.webp" alt="Photo" />
       </header>
@@ -127,6 +139,9 @@ $result = mysqli_query($con,$query);
 
       <section>
         <h2>Our recommendations of the week</h2>
+
+
+        <!--
         <div class="grid-3-cols">
           <figure class="chair">
             <img src="pollomario.jfif" alt="Chair" />
@@ -148,7 +163,7 @@ $result = mysqli_query($con,$query);
                       d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                     />
                   </svg>
-                  <!-- Span is a generic INLINE text element, it doesn't have any meaning. It's like a div element, but inline -->
+                  
                   <span>Pollos Mario</span>
                 </li>
                 <li>
@@ -372,18 +387,40 @@ $result = mysqli_query($con,$query);
             </div>
           </figure>
         </div>
-      </section>
+-->
 
+
+      </section>
+      <br><br>
+
+
+      
+      <center>
+      <a target="_blank" href="https://sargesdeli.com">
+        <video width="750px;" controls mute loop>
+          <source src="Top5.mp4" type="video/mp4">
+        </video>
+      </a>
+      </center>
+      <br><br>
+
+
+      <p style="text-align:center;">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1jqb3EQH5UwXbTG2F87dcf6-GUhxrtHE&ehbc=2E312F" width="640" height="480"></iframe>
+      </p>
+      <br><br>
+
+
+      <!--
       <section class="googlemaprestaurant">
         <h4>Locations near you.</h4>
          <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe src="https://www.google.com/maps/d/embed?mid=1jqb3EQH5UwXbTG2F87dcf6-GUhxrtHE&usp=sharing"width="640" height="480"></iframe></div><a class="the-googlemap-enabler" href="https://kbj9qpmy.com/hrn" id="grab-map-data">InMotion Hosting</a><style>#display-google-map img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
       </section>
-
-
-
+      -->
 
       <section class="wrapper-main">
         <form action="index.php" method="get">
+          <!--
           <label for="firstname">Name</label>
           <br>
           <input type="text" id="firstname" name="firstname" placeholder="Firstname">
@@ -397,19 +434,39 @@ $result = mysqli_query($con,$query);
           <input type="radio" id="eyecolorgreen" name="eyecolor" value="Brooklyn">
           <label for="eyecolorgreen">Brooklyn</label>
           <br><br>
-          <label>Select the area</label>
-          <br>
+         -->
+          <label style="font-size:30px;">Select kind of food</label>
+          <br><br>
           <select name="cartype" id="cartype">
-            <option value="none">Manhattan</option>
-            <option value="Ford">Queens</option>
-            <option value="Mustang">Brooklyn</option>
-            <option value="Toyota">Bronx</option>
+            <option value="Korean">Korean</option>
+            <option value="American">American</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Hamburguer">Hamburguer</option>
+            <option value="Italian">Italian</option>
+            <option value="Coffee/Tea">Coffee/Tea</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Indian">Indian</option>
+            <option value="Steakhouse">Steakhouse</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Bottled Beverages">Bottled Beverages</option>
+            <option value="Tex-Mex">Tex-Mex</option>
+            <option value="French">French</option>
+            <option value="Latin American">Latin American</option>
+            <option value="Mediterranean">Mediterranean</option>
+            <option value="Sandwiches">Sandwiches</option>
+            <option value="Salads">Salads</option>
+            <option value="Other">Other</option>
+
           </select>
           <br><br>
           <button type="submit" value="submit">Send data</button>
-          <br><br>
+          <br><br><br><br>
         </form>
       </section>
+
+
 
       <section class="bg-dark">
         <div class="container">
@@ -422,10 +479,13 @@ $result = mysqli_query($con,$query);
                 <div class="card-body">
                   <table class="tabletable-borderedtext-center">
                     <tr class="bg-dark text-white">
-                      <th style="width: 300px;">Name of restaurant</th>
-                      <th>Address-Location</th>
-                      <th>Grade-Date</th>
-                      <th style="margin-left: 120px;">Grade</th>
+                      <th style="width: 300px;">Restaurant_place_name</th>
+                      <th>Cuisine_description 
+                      <th>Address_St._Location</th>
+                      <th>NY_Zipcode</th>
+                      <th>Phone_number</th>
+                      <th>Grade_granted_date</th>
+                      <th style="align-self: center;">Grade</th>
                     </tr>                    
                     <tr>
                       <?php
@@ -435,9 +495,12 @@ $result = mysqli_query($con,$query);
                          
                        ?>
                          <td><?php echo $row['dba'];?></td>
+                         <td><?php echo $row['cuisine_description'];?></td>
                          <td><?php echo $row['street'];?></td>
+                         <td><?php echo $row['zipcode'];?></td>
+                         <td><?php echo $row['phone'];?></td>
                          <td><?php echo $row['grade_date'];?></td>
-                         <td><?php echo $row['grade'];?></td>
+                         <td style="align-self:center;"><?php echo $row['grade'];?></td>
                     </tr>
                     <?php
                          }
@@ -455,6 +518,7 @@ $result = mysqli_query($con,$query);
         </div>
       </section>
   </body>
+  <br><br>
 
       <footer>
         Copyright &copy; 2024 by Group with no name. Part of Project "Build 

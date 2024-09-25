@@ -257,7 +257,11 @@ h4 {
   padding:12px;
 }
 
-
+footer {
+  margin-bottom: 48px;
+  font-size: 14px;
+  color: #495057;
+}
 
 
 
@@ -267,6 +271,12 @@ h4 {
 }
 
 textarea:focus,input[type="text"]:focus{
+  /*border: 2px solid #111;*/
+  outline: 1px solid blue;
+  
+}
+
+textarea:focus,input[type="password"]:focus{
   /*border: 2px solid #111;*/
   outline: 1px solid blue;
   
@@ -293,13 +303,14 @@ input[type="text"], textarea, select, button{
   font-size: 30px;
 }
 
+input[type="password"], textarea, select, button{
+  padding:10px;
+  border-radius: 10 px;
+  font-size: 30px;
+}
+
 button:hover{
   background-color:rgb(203, 195, 186);
   cursor:pointer;
 }
 
-footer {
-  margin-bottom: 48px;
-  font-size: 14px;
-  color: #495057;
-}
