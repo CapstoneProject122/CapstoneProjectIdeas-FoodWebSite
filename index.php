@@ -1,6 +1,6 @@
 <?php
 require_once('config/db.php');
-$query = "select dba,cuisine_description,street,zipcode,phone,grade_date,grade from nyc_restaurants where cuisine_description='$_GET[cartype]' and score='0'";
+$query = "select dba,cuisine_description,street,zipcode,phone,grade_date,grade from nyc_restaurants where cuisine_description='$_GET[cartype]' and zipcode='$_GET[firstname]' and grade_date!='';";
 $result = mysqli_query($con,$query);
 
 ?>
@@ -43,7 +43,7 @@ $result = mysqli_query($con,$query);
           <p class="header-text">
             In New York Certification helps prevent foodborne illnesses that can affect customers and protect the business from negative consequences.
           </p>
-          <a class="btn btn--big" href="login/login.html">Login</a>
+          <a class="btn btn--big" href="login/login.php">Login</a>
         </div>
         <img src="hero5.webp" alt="Photo" />
       </header>
@@ -391,9 +391,7 @@ $result = mysqli_query($con,$query);
 
 
       </section>
-      <br><br>
-
-
+      
       
       <center>
       <a target="_blank" href="https://sargesdeli.com">
@@ -420,11 +418,12 @@ $result = mysqli_query($con,$query);
 
       <section class="wrapper-main">
         <form action="index.php" method="get">
-          <!--
-          <label for="firstname">Name</label>
-          <br>
-          <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+          
+          <label style="font-size:30px;"  for="firstname">Enter NY zipcode</label>
           <br><br>
+          <input type="text" id="firstname" name="firstname" placeholder="Zipcode">
+          <br><br>
+          <!--
           <label>Pick your area</label>
           <br>
           <input type="radio" id="eyecolorblue" name="eyecolor" value="Manhattan">

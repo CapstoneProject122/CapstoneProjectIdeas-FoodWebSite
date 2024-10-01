@@ -64,6 +64,10 @@ function getLoginFormErrors(email, password){
     errors.push('Password is required')
     password_input.parentElement.classList.add('incorrect')
   }
+  if(email=='User1@myemail.com' && password=='Password1'){
+    errors.push('Son correctos')
+    window.location.replace('1.html')
+  }
 
   return errors;
 }
